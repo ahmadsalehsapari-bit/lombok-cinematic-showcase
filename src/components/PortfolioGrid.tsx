@@ -6,6 +6,12 @@ import portfolioWedding from '../assets/portfolio-wedding.jpg';
 import portfolioBrand from '../assets/portfolio-brand.jpg';
 import portfolioTravel from '../assets/portfolio-travel.jpg';
 
+// TO ADD YOUR OWN VIDEOS:
+// 1. Put video files in src/assets/ folder (e.g., video1.mp4, video2.mp4)
+// 2. Import them: import myVideo from '../assets/my-video.mp4'
+// 3. Add videoUrl property to each item below
+// 4. Or use YouTube/Vimeo links: videoUrl: 'https://youtube.com/embed/VIDEO_ID'
+
 const portfolioItems = [
   {
     id: '1',
@@ -13,6 +19,7 @@ const portfolioItems = [
     description: 'An intimate wedding ceremony capturing the essence of Lombok\'s natural beauty during the perfect golden hour.',
     category: 'Wedding',
     thumbnail: portfolioWedding,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
   },
   {
     id: '2',
@@ -20,6 +27,7 @@ const portfolioItems = [
     description: 'Premium brand video showcasing the elegance and sophistication of Lombok\'s finest resort destination.',
     category: 'Brand',
     thumbnail: portfolioBrand,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
   },
   {
     id: '3',
@@ -27,6 +35,7 @@ const portfolioItems = [
     description: 'Documentary-style storytelling capturing the authentic traditions and daily life of Sasak village communities.',
     category: 'Travel',
     thumbnail: portfolioTravel,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
   },
   {
     id: '4',
@@ -34,6 +43,7 @@ const portfolioItems = [
     description: 'Cinematic coverage of a beachfront celebration with dramatic sunset lighting.',
     category: 'Wedding',
     thumbnail: portfolioWedding,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
   },
   {
     id: '5',
@@ -41,6 +51,7 @@ const portfolioItems = [
     description: 'Epic travel documentation of mountain adventures and scenic landscapes.',
     category: 'Travel',
     thumbnail: portfolioTravel,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
   },
   {
     id: '6',
@@ -48,6 +59,7 @@ const portfolioItems = [
     description: 'Professional brand storytelling for enterprise clients.',
     category: 'Brand',
     thumbnail: portfolioBrand,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
   },
 ];
 

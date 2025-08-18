@@ -11,6 +11,7 @@ interface LightboxProps {
     description: string;
     category: string;
     thumbnail: string;
+    videoUrl?: string;
   } | null;
 }
 
@@ -31,13 +32,25 @@ const Lightbox: React.FC<LightboxProps> = ({ isOpen, onClose, project }) => {
           <X className="h-4 w-4" />
         </Button>
         
-        <div className="aspect-video bg-secondary/20 flex items-center justify-center">
-          <div className="text-center">
-            <div className="bg-primary/20 backdrop-blur-sm rounded-full p-6 mx-auto mb-4 w-24 h-24 flex items-center justify-center">
-              <Play className="h-8 w-8 text-primary ml-2" />
+        <div className="aspect-video bg-secondary/20">
+          {project.videoUrl ? (
+            <iframe
+              src={project.videoUrl}
+              className="w-full h-full rounded-t-lg"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title={project.title}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <div className="text-center">
+                <div className="bg-primary/20 backdrop-blur-sm rounded-full p-6 mx-auto mb-4 w-24 h-24 flex items-center justify-center">
+                  <Play className="h-8 w-8 text-primary ml-2" />
+                </div>
+                <p className="text-muted-foreground">Add your video URL to display here</p>
+              </div>
             </div>
-            <p className="text-muted-foreground">Video Player Coming Soon</p>
-          </div>
+          )}
         </div>
         
         <div className="p-6 border-t border-border">
