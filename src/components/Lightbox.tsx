@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Play } from 'lucide-react';
+import { X, Play, ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
 
 interface LightboxProps {
@@ -23,6 +23,15 @@ const Lightbox: React.FC<LightboxProps> = ({ isOpen, onClose, project }) => {
       <div className="absolute inset-0" onClick={onClose} />
       
       <div className="relative max-w-5xl w-full mx-4 bg-card rounded-lg shadow-cinematic border border-border overflow-hidden">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onClose}
+          className="absolute top-4 left-4 z-10 bg-background/20 backdrop-blur-sm hover:bg-background/40"
+        >
+          <ArrowLeft className="h-4 w-4" />
+        </Button>
+        
         <Button
           variant="ghost"
           size="icon"
