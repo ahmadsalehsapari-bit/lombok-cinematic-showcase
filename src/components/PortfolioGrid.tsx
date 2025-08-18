@@ -5,6 +5,7 @@ import Lightbox from './Lightbox';
 import portfolioWedding from '../assets/portfolio-wedding.jpg';
 import portfolioBrand from '../assets/portfolio-brand.jpg';
 import portfolioTravel from '../assets/portfolio-travel.jpg';
+import portfolioGoldenHour from '../assets/portfolio-golden-hour.jpg';
 
 // TO ADD YOUR OWN VIDEOS:
 // 1. Put video files in src/assets/ folder (e.g., video1.mp4, video2.mp4)
@@ -18,7 +19,7 @@ const portfolioItems = [
     title: 'Golden Hour Romance',
     description: 'An intimate wedding ceremony capturing the essence of Lombok\'s natural beauty during the perfect golden hour.',
     category: 'Wedding',
-    thumbnail: portfolioWedding,
+    thumbnail: portfolioGoldenHour,
     videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=2', // Your embedded video
   },
   {
