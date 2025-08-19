@@ -20,7 +20,7 @@ const portfolioItems = [
     description: 'An intimate wedding ceremony capturing the essence of Lombok\'s natural beauty during the perfect golden hour.',
     category: 'Wedding',
     thumbnail: '/lovable-uploads/700e46e3-2a78-4345-9c10-103d88494aba.png',
-    videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=3', // Wedding video
+    videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=3',
   },
   {
     id: '2',
@@ -28,43 +28,75 @@ const portfolioItems = [
     description: 'Premium brand video showcasing the elegance and sophistication of Lombok\'s finest resort destination.',
     category: 'Brand',
     thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78', // Your Brand video
+    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78',
   },
   {
     id: '3',
-    title: 'Cultural Heritage',
-    description: 'Documentary-style storytelling capturing the authentic traditions and daily life of Sasak village communities.',
-    category: 'Travel',
-    thumbnail: portfolioTravel,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
+    title: 'Premium Property Tour',
+    description: 'Stunning real estate showcase featuring luxury villas and scenic property locations with cinematic quality.',
+    category: 'Real Estate',
+    thumbnail: portfolioGoldenHour,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
     id: '4',
-    title: 'Sunset Celebration',
-    description: 'Cinematic coverage of a beachfront celebration with dramatic sunset lighting.',
-    category: 'Wedding',
-    thumbnail: portfolioWedding,
-    videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=3', // Wedding video
+    title: 'Corporate Vision',
+    description: 'Professional company profile highlighting organizational values and business excellence through compelling visual storytelling.',
+    category: 'Corporate/Company Profile',
+    thumbnail: portfolioBrand,
+    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78',
   },
   {
     id: '5',
-    title: 'Adventure Journey',
-    description: 'Epic travel documentation of mountain adventures and scenic landscapes.',
-    category: 'Travel',
-    thumbnail: portfolioTravel,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
+    title: 'Festival Celebration',
+    description: 'Dynamic event coverage capturing the energy and atmosphere of cultural festivals and celebrations.',
+    category: 'Event',
+    thumbnail: portfolioWedding,
+    videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=3',
   },
   {
     id: '6',
-    title: 'Corporate Excellence',
-    description: 'Professional brand storytelling for enterprise clients.',
-    category: 'Brand',
+    title: 'Cultural Heritage Journey',
+    description: 'Documentary-style travel storytelling capturing authentic traditions and scenic landscapes of Lombok.',
+    category: 'Travel',
+    thumbnail: portfolioTravel,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: '7',
+    title: 'Athletic Excellence',
+    description: 'High-energy sports videography showcasing athletic performance and competitive spirit.',
+    category: 'Sport',
+    thumbnail: portfolioGoldenHour,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: '8',
+    title: 'Life Stories',
+    description: 'Authentic documentary filmmaking capturing real stories and genuine human experiences.',
+    category: 'Documentary',
+    thumbnail: portfolioTravel,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  },
+  {
+    id: '9',
+    title: 'Digital Impact',
+    description: 'Creative social media content designed to engage audiences and build brand presence across platforms.',
+    category: 'Social Media Content',
     thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78', // Your Brand video
+    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78',
+  },
+  {
+    id: '10',
+    title: 'Cinematic Masterpiece',
+    description: 'Feature-length film production showcasing narrative storytelling with professional cinematography.',
+    category: 'Film',
+    thumbnail: portfolioGoldenHour,
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
 ];
 
-const categories = ['All', 'Wedding', 'Brand', 'Travel', 'Storytelling'];
+const categories = ['All', 'Brand', 'Wedding', 'Real Estate', 'Corporate/Company Profile', 'Event', 'Travel', 'Sport', 'Documentary', 'Social Media Content', 'Film'];
 
 const PortfolioGrid: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('All');
