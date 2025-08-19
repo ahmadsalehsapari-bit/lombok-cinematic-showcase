@@ -20,7 +20,7 @@ const portfolioItems = [
     description: 'An intimate wedding ceremony capturing the essence of Lombok\'s natural beauty during the perfect golden hour.',
     category: 'Wedding',
     thumbnail: portfolioGoldenHour,
-    videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=2', // Your embedded video
+    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78', // Your embedded video
   },
   {
     id: '2',
