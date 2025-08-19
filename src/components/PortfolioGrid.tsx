@@ -19,7 +19,7 @@ const portfolioItems = [
     title: 'Golden Hour Romance',
     description: 'An intimate wedding ceremony capturing the essence of Lombok\'s natural beauty during the perfect golden hour.',
     category: 'Wedding',
-    thumbnail: portfolioGoldenHour,
+    thumbnail: '/lovable-uploads/700e46e3-2a78-4345-9c10-103d88494aba.png',
     videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=3', // Wedding video
   },
   {
