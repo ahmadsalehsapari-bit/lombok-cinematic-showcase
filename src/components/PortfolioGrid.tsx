@@ -130,15 +130,19 @@ const PortfolioGrid: React.FC = () => {
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium mb-2">
-                      {item.category}
-                    </span>
-                    <h3 className="text-xl font-cinematic font-semibold mb-2 text-copper-gradient">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {item.description}
-                    </p>
+                    {/* Gradient Background for Text Readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-transparent rounded-b-lg" />
+                    <div className="relative z-10">
+                      <span className="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium mb-2">
+                        {item.category}
+                      </span>
+                      <h3 className="text-xl font-cinematic font-semibold mb-2 text-copper-gradient">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
