@@ -28,7 +28,7 @@ const portfolioItems = [
     description: 'Premium brand video showcasing the elegance and sophistication of Lombok\'s finest resort destination.',
     category: 'Brand',
     thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
+    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78', // Your Brand video
   },
   {
     id: '3',
@@ -60,7 +60,7 @@ const portfolioItems = [
     description: 'Professional brand storytelling for enterprise clients.',
     category: 'Brand',
     thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your video
+    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78', // Your Brand video
   },
 ];
 
