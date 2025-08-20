@@ -67,8 +67,8 @@ const portfolioItems = [
     title: 'Athletic Excellence',
     description: 'High-energy sports videography showcasing athletic performance and competitive spirit.',
     category: 'Sport',
-    thumbnail: portfolioGoldenHour,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    thumbnail: '/lovable-uploads/61c570d3-196e-4bcb-ac7e-c37b0cc4c9ef.png',
+    videoUrl: 'https://www.youtube.com/embed/J_QezRN_CFc',
   },
   {
     id: '8',
