@@ -27,8 +27,8 @@ const portfolioItems = [
     title: 'Luxury Resort Showcase',
     description: 'Premium brand video showcasing the elegance and sophistication of Lombok\'s finest resort destination.',
     category: 'Brand',
-    thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78',
+    thumbnail: '/lovable-uploads/d5fc9e23-27ac-4155-8c09-29135eb492f1.png',
+    videoUrl: 'https://www.youtube.com/embed/YHihZg2MrSU',
   },
   {
     id: '3',
