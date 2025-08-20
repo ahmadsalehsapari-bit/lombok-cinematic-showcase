@@ -35,8 +35,8 @@ const portfolioItems = [
     title: 'Premium Property Tour',
     description: 'Stunning real estate showcase featuring luxury villas and scenic property locations with cinematic quality.',
     category: 'Real Estate',
-    thumbnail: portfolioGoldenHour,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    thumbnail: '/lovable-uploads/6ccecee3-36d2-47fb-a912-323307ed1115.png',
+    videoUrl: 'https://www.youtube.com/embed/zWVpx4NO_XY',
   },
   {
     id: '4',
