@@ -59,7 +59,7 @@ const portfolioItems = [
     title: 'Cultural Heritage Journey',
     description: 'Documentary-style travel storytelling capturing authentic traditions and scenic landscapes of Lombok.',
     category: 'Travel',
-    thumbnail: portfolioTravel,
+    thumbnail: '/lovable-uploads/cultural-heritage-thumbnail.png',
     videoUrl: 'https://www.youtube.com/embed/ISITbYol8UQ',
   },
   {
