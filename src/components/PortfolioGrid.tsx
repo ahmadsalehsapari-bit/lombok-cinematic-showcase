@@ -60,7 +60,7 @@ const portfolioItems = [
     description: 'Documentary-style travel storytelling capturing authentic traditions and scenic landscapes of Lombok.',
     category: 'Travel',
     thumbnail: portfolioTravel,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/ISITbYol8UQ',
   },
   {
     id: '7',
