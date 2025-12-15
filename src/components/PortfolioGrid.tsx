@@ -44,7 +44,7 @@ const portfolioItems = [
     description: 'Professional company profile highlighting organizational values and business excellence through compelling visual storytelling.',
     category: 'Corporate/Company Profile',
     thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78',
+    videoUrl: 'https://www.youtube.com/embed/GrO6n_wlgBs',
   },
   {
     id: '5',
