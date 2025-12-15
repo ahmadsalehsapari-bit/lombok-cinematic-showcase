@@ -174,7 +174,7 @@ const ContactSection: React.FC = () => {
                   <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
                     <MessageCircle className="h-4 w-4" />
                   </Button>
-                  <a href="https://www.instagram.com/dracobarth_/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/dracobarth_?igsh=NmE3bTlzb3hmM3Uz" target="_blank" rel="noopener noreferrer">
                     <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
                       <Instagram className="h-4 w-4" />
                     </Button>
