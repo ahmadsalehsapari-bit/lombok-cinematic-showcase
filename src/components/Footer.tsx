@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             <div className="space-y-2 text-muted-foreground">
               <p>Mataram, Lombok</p>
               <p>West Nusa Tenggara, Indonesia</p>
-              <p className="hover:text-primary transition-colors cursor-pointer">+62 812-3456-7890</p>
+              <p className="hover:text-primary transition-colors cursor-pointer">+62 81 943 390 626</p>
               <p className="hover:text-primary transition-colors cursor-pointer">hello@lombardvisual.com</p>
             </div>
           </div>
