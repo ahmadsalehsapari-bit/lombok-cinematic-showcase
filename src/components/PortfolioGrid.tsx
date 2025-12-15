@@ -75,8 +75,8 @@ const portfolioItems = [
     title: 'Life Stories',
     description: 'Authentic documentary filmmaking capturing real stories and genuine human experiences.',
     category: 'Documentary',
-    thumbnail: portfolioTravel,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    thumbnail: '/lovable-uploads/life-stories-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/RcjNCCbVdOQ',
   },
   {
     id: '9',
