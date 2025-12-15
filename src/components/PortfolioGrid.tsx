@@ -48,11 +48,11 @@ const portfolioItems = [
   },
   {
     id: '5',
-    title: 'Festival Celebration',
-    description: 'Dynamic event coverage capturing the energy and atmosphere of cultural festivals and celebrations.',
+    title: 'Event Celebration',
+    description: 'Professional event videography capturing memorable moments, dynamic atmospheres, and unforgettable experiences with cinematic excellence.',
     category: 'Event',
-    thumbnail: portfolioWedding,
-    videoUrl: 'https://www.youtube.com/embed/WD4Z1Tbdeec?start=3',
+    thumbnail: '/lovable-uploads/event-celebration-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/FppT4du7pMg',
   },
   {
     id: '6',
