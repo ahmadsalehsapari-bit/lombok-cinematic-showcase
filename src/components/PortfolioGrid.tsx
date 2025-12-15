@@ -43,7 +43,7 @@ const portfolioItems = [
     title: 'Corporate Vision',
     description: 'Professional company profile highlighting organizational values and business excellence through compelling visual storytelling.',
     category: 'Corporate/Company Profile',
-    thumbnail: portfolioBrand,
+    thumbnail: '/lovable-uploads/corporate-vision-thumbnail.png',
     videoUrl: 'https://www.youtube.com/embed/GrO6n_wlgBs',
   },
   {
