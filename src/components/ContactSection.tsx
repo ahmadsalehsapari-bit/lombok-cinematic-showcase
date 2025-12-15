@@ -151,7 +151,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
-                    <p className="text-muted-foreground">+62 812-3456-7890</p>
+                    <p className="text-muted-foreground">+62 81 943 390 626</p>
                   </div>
                 </div>
 
@@ -174,9 +174,11 @@ const ContactSection: React.FC = () => {
                   <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
                     <MessageCircle className="h-4 w-4" />
                   </Button>
-                  <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
-                    <Instagram className="h-4 w-4" />
-                  </Button>
+                  <a href="https://www.instagram.com/dracobarth_/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+                      <Instagram className="h-4 w-4" />
+                    </Button>
+                  </a>
                   <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
                     <Mail className="h-4 w-4" />
                   </Button>
