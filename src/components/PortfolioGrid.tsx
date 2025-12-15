@@ -83,8 +83,8 @@ const portfolioItems = [
     title: 'Digital Impact',
     description: 'Creative social media content designed to engage audiences and build brand presence across platforms.',
     category: 'Social Media Content',
-    thumbnail: portfolioBrand,
-    videoUrl: 'https://www.youtube.com/embed/zj1L5zm_f78',
+    thumbnail: '/lovable-uploads/digital-impact-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/D6qxkK-hUOo',
   },
   {
     id: '10',
