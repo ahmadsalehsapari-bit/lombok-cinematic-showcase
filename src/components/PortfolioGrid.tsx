@@ -142,6 +142,22 @@ const portfolioItems = [
     thumbnail: '/lovable-uploads/cultural-heritage-2-thumbnail.png',
     videoUrl: 'https://www.youtube.com/embed/a3imV1fM_TA',
   },
+  {
+    id: '17',
+    title: 'Luxury Brand Showcase',
+    description: 'Premium brand storytelling capturing the essence of luxury lifestyle and sophisticated brand identity.',
+    category: 'Brand',
+    thumbnail: portfolioBrand,
+    videoUrl: '',
+  },
+  {
+    id: '18',
+    title: 'Viral Content Creation',
+    description: 'Engaging social media content designed to maximize audience reach and brand engagement across platforms.',
+    category: 'Social Media Content',
+    thumbnail: portfolioBrand,
+    videoUrl: '',
+  },
 ];
 
 const categories = ['All', 'Brand', 'Wedding', 'Real Estate', 'Corporate/Company Profile', 'Event', 'Travel', 'Sport', 'Documentary', 'Social Media Content', 'Film'];
