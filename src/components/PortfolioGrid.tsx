@@ -115,8 +115,8 @@ const portfolioItems = [
     title: 'Premium Property Tour II',
     description: 'Exclusive luxury villa showcase featuring stunning architecture and breathtaking ocean views.',
     category: 'Real Estate',
-    thumbnail: portfolioTravel,
-    videoUrl: '',
+    thumbnail: '/lovable-uploads/premium-property-2-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/vsgG-STZJcY',
   },
   {
     id: '14',
@@ -131,16 +131,16 @@ const portfolioItems = [
     title: 'Golden Hour Romance II',
     description: 'Breathtaking beachside wedding ceremony filmed during the magical golden hour in Lombok.',
     category: 'Wedding',
-    thumbnail: portfolioWedding,
-    videoUrl: '',
+    thumbnail: '/lovable-uploads/golden-hour-romance-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/EaBQFKnMnaE',
   },
   {
     id: '16',
     title: 'Cultural Heritage Journey II',
     description: 'Immersive travel documentary exploring the rich traditions and cultural treasures of Lombok.',
     category: 'Travel',
-    thumbnail: portfolioTravel,
-    videoUrl: '',
+    thumbnail: '/lovable-uploads/cultural-heritage-2-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/a3imV1fM_TA',
   },
 ];
 
