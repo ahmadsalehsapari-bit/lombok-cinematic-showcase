@@ -123,8 +123,8 @@ const portfolioItems = [
     title: 'Premium Property Tour III',
     description: 'High-end real estate presentation capturing the elegance of modern tropical living spaces.',
     category: 'Real Estate',
-    thumbnail: portfolioTravel,
-    videoUrl: '',
+    thumbnail: '/lovable-uploads/premium-property-3-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/d1hT5xVsX5w',
   },
   {
     id: '15',
@@ -147,16 +147,16 @@ const portfolioItems = [
     title: 'Luxury Brand Showcase',
     description: 'Premium brand storytelling capturing the essence of luxury lifestyle and sophisticated brand identity.',
     category: 'Brand',
-    thumbnail: portfolioBrand,
-    videoUrl: '',
+    thumbnail: '/lovable-uploads/luxury-brand-thumbnail.png',
+    videoUrl: 'https://www.youtube.com/embed/dbKpoVddzhA',
   },
   {
     id: '18',
     title: 'Viral Content Creation',
     description: 'Engaging social media content designed to maximize audience reach and brand engagement across platforms.',
     category: 'Social Media Content',
-    thumbnail: portfolioBrand,
-    videoUrl: '',
+    thumbnail: '/lovable-uploads/viral-content-thumbnail.jpg',
+    videoUrl: 'https://www.youtube.com/embed/gT06fphNDEs',
   },
 ];
 
