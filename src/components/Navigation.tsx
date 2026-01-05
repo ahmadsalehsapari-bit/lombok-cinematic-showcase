@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import lombokLogo from '@/assets/lombok-visual-logo.jpg';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +36,13 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-2xl font-cinematic font-bold">
+          <div className="flex items-center gap-3">
+            <img 
+              src={lombokLogo} 
+              alt="Lombok Visual Logo" 
+              className="h-10 w-10 object-contain rounded"
+            />
+            <h1 className="text-xl font-cinematic font-bold">
               <span className="text-copper-gradient">Lombok</span>{' '}
               <span className="text-foreground">Visual</span>
             </h1>
