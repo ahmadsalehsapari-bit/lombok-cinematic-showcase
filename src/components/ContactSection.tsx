@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Send, MessageCircle, Mail, Instagram, MapPin, Phone } from 'lucide-react';
+import { Send, MessageCircle, Mail, Instagram, MapPin, Phone, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,11 +10,47 @@ const ContactSection: React.FC = () => {
     service: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setStatus('loading');
+    setErrorMessage('');
+
+    // Client-side validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setStatus('error');
+      setErrorMessage('Mohon isi semua field yang wajib diisi.');
+      return;
+    }
+
+    if (formData.name.length > 100 || formData.email.length > 255 || formData.message.length > 2000) {
+      setStatus('error');
+      setErrorMessage('Input melebihi panjang maksimum yang diizinkan.');
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          service: formData.service,
+          message: formData.message.trim(),
+        },
+      });
+
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
+      setStatus('success');
+      setFormData({ name: '', email: '', service: '', message: '' });
+    } catch (err: any) {
+      console.error('Error sending message:', err);
+      setStatus('error');
+      setErrorMessage('Gagal mengirim pesan. Silakan coba lagi atau hubungi langsung via WhatsApp.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -21,6 +58,7 @@ const ContactSection: React.FC = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    if (status !== 'idle') setStatus('idle');
   };
 
   return (
@@ -47,7 +85,7 @@ const ContactSection: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
-                    Full Name
+                    Full Name <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -56,6 +94,7 @@ const ContactSection: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    maxLength={100}
                     className="w-full px-4 py-3 bg-background/50 backdrop-blur-sm border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground"
                     placeholder="Enter your full name"
                   />
@@ -63,7 +102,7 @@ const ContactSection: React.FC = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
-                    Email Address
+                    Email Address <span className="text-primary">*</span>
                   </label>
                   <input
                     type="email"
@@ -72,6 +111,7 @@ const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    maxLength={255}
                     className="w-full px-4 py-3 bg-background/50 backdrop-blur-sm border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground"
                     placeholder="Enter your email"
                   />
@@ -87,21 +127,20 @@ const ContactSection: React.FC = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  required
                   className="w-full px-4 py-3 bg-background/50 backdrop-blur-sm border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground"
                 >
                   <option value="">Select a service</option>
-                  <option value="wedding">Wedding Videography</option>
-                  <option value="brand">Brand/Commercial Video</option>
-                  <option value="travel">Travel Documentation</option>
-                  <option value="storytelling">Custom Storytelling</option>
-                  <option value="other">Other</option>
+                  <option value="Wedding Videography">Wedding Videography</option>
+                  <option value="Brand/Commercial Video">Brand/Commercial Video</option>
+                  <option value="Travel Documentation">Travel Documentation</option>
+                  <option value="Custom Storytelling">Custom Storytelling</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
-                  Project Details
+                  Project Details <span className="text-primary">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -110,14 +149,48 @@ const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={6}
+                  maxLength={2000}
                   className="w-full px-4 py-3 bg-background/50 backdrop-blur-sm border border-border rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-foreground resize-none"
                   placeholder="Tell us about your project vision, timeline, and any specific requirements..."
                 />
+                <p className="text-xs text-muted-foreground mt-1 text-right">{formData.message.length}/2000</p>
               </div>
 
-              <Button type="submit" variant="hero" size="lg" className="w-full">
-                <Send className="mr-2 h-4 w-4" />
-                Send Message
+              {/* Status Messages */}
+              {status === 'success' && (
+                <div className="flex items-center gap-3 p-4 bg-accent/30 border border-primary/30 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
+                  <p className="text-foreground text-sm">
+                    Pesan berhasil dikirim! Kami akan merespons dalam 24 jam.
+                  </p>
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className="flex items-center gap-3 p-4 bg-destructive/10 border border-destructive/30 rounded-lg">
+                  <AlertCircle className="h-5 w-5 text-destructive shrink-0" />
+                  <p className="text-destructive text-sm">{errorMessage}</p>
+                </div>
+              )}
+
+              <Button
+                type="submit"
+                variant="hero"
+                size="lg"
+                className="w-full"
+                disabled={status === 'loading'}
+              >
+                {status === 'loading' ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Mengirim...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-4 w-4" />
+                    Send Message
+                  </>
+                )}
               </Button>
             </form>
           </div>
@@ -162,7 +235,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-muted-foreground">ahmadsalehsapari@gmail.com</p>
+                    <p className="text-muted-foreground">lombokvisuals@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -171,17 +244,21 @@ const ContactSection: React.FC = () => {
               <div className="mt-8 pt-8 border-t border-primary/20">
                 <h4 className="font-semibold mb-4">Follow Our Journey</h4>
                 <div className="flex gap-4">
-                  <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
-                    <MessageCircle className="h-4 w-4" />
-                  </Button>
+                  <a href="https://wa.me/6281943390626" target="_blank" rel="noopener noreferrer">
+                    <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+                      <MessageCircle className="h-4 w-4" />
+                    </Button>
+                  </a>
                   <a href="https://www.instagram.com/dracobarth_?igsh=NmE3bTlzb3hmM3Uz" target="_blank" rel="noopener noreferrer">
                     <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
                       <Instagram className="h-4 w-4" />
                     </Button>
                   </a>
-                  <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
-                    <Mail className="h-4 w-4" />
-                  </Button>
+                  <a href="mailto:lombokvisuals@gmail.com">
+                    <Button variant="cinematic" size="icon" className="hover:bg-primary hover:text-primary-foreground">
+                      <Mail className="h-4 w-4" />
+                    </Button>
+                  </a>
                 </div>
               </div>
 
