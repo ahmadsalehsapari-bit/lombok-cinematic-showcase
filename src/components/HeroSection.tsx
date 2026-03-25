@@ -25,15 +25,15 @@ const HeroSection: React.FC = () => {
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <div className="slide-up">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinematic font-bold mb-6 leading-tight">
-            Cinematic Stories from{' '}
-            <span className="text-copper-gradient block">Lombok</span>
+            Lombok Videographer
+            <span className="text-copper-gradient block">Cinematic Stories for Brands & Luxury Experiences</span>
           </h1>
         </div>
         
         <div className="slide-up" style={{ animationDelay: '0.3s' }}>
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Professional videography services crafting premium visual narratives 
-            that capture the essence of your most precious moments.
+            High-end videography services in Lombok, creating cinematic content 
+            for brands, villas, and unforgettable experiences.
           </p>
         </div>
         
