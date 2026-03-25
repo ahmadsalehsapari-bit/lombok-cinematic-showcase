@@ -24,7 +24,7 @@ const portfolioItems = [
   },
   {
     id: '2',
-    title: 'Luxury Resort Showcase',
+    title: 'Bold Brand Identity',
     description: 'Creative brand video highlighting product identity and visual storytelling for commercial campaigns.',
     category: 'Brand',
     thumbnail: '/lovable-uploads/d5fc9e23-27ac-4155-8c09-29135eb492f1.png',
