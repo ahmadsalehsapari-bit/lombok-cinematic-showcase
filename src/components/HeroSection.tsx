@@ -24,9 +24,9 @@ const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <div className="slide-up">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinematic font-bold mb-6 leading-tight">
-            Lombok Videographer
-            <span className="text-copper-gradient block">Cinematic Stories for Brands & Luxury Experiences</span>
+          <h1 className="font-cinematic font-bold mb-6 leading-tight">
+            <span className="text-5xl md:text-6xl lg:text-7xl block">Lombok Videographer</span>
+            <span className="text-copper-gradient block text-2xl md:text-3xl lg:text-4xl mt-3">Cinematic Stories for Brands & Luxury Experiences</span>
           </h1>
         </div>
         
