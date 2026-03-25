@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               <p>Mataram, Lombok</p>
               <p>West Nusa Tenggara, Indonesia</p>
               <p className="hover:text-primary transition-colors cursor-pointer">+62 81 943 390 626</p>
-              <p className="hover:text-primary transition-colors cursor-pointer">hello@lombardvisual.com</p>
+              <p className="hover:text-primary transition-colors cursor-pointer">lombokvisuals@gmail.com</p>
             </div>
           </div>
         </div>
